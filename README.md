@@ -219,7 +219,7 @@ Untuk menjaga kebersihan dan modularitas template, pisahkan beberapa elemen ke d
 
 1. **Memisahkan Pesan (Messages)**
 
-   - **Potong Elemen Messages:** Di `base.html`, potong bagian yang menampilkan pesan (biasanya menggunakan `{% for message in messages %}`).
+   - **Potong Elemen Messages:** Di `base.html`, potong bagian yang menampilkan pesan (biasanya menggunakan `<messages> </messages>`).
    - **Buat Folder `includes` dan File `messages.html`:**
 
      ```bash
