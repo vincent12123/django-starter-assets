@@ -328,6 +328,12 @@ Berikut adalah langkah-langkah untuk membuat halaman edit profil dalam aplikasi 
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     ACCOUNT_AUTHENTICATION_METHOD = 'email'
     ACCOUNT_EMAIL_REQUIRED = True
+
+    AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+      ]
+
     ```
 
     *Penjelasan:*
@@ -335,12 +341,8 @@ Berikut adalah langkah-langkah untuk membuat halaman edit profil dalam aplikasi 
     - Menggunakan backend email console untuk pengujian.
     - Mengatur metode autentikasi menggunakan email dan mewajibkan email.
    
-      ```python
-      AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
-    ]
-      ```
+
+
 
 25. **Menguji Fungsi Login:**
 
