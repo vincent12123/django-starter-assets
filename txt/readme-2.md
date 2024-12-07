@@ -334,6 +334,13 @@ Berikut adalah langkah-langkah untuk membuat halaman edit profil dalam aplikasi 
     - Mengatur URL redirect setelah login.
     - Menggunakan backend email console untuk pengujian.
     - Mengatur metode autentikasi menggunakan email dan mewajibkan email.
+   
+      ```python
+      AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+    ]
+      ```
 
 25. **Menguji Fungsi Login:**
 
